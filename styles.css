@@ -1,0 +1,135 @@
+body {
+    /* Set the stage for the whole page */
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif; /* Corrected spelling */
+
+    /* 🎨 Background: Using the lighter lavender */
+    background: #C9A9FF; 
+
+    /* Flexbox: Centering the entire elegant-container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.elegant-container {
+    /* Makes the text pop over the photo */
+    background-color: #A076DC;
+    
+    /* Flexbox: Stacking and centering the inner elements */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* Style and Spacing */
+    padding: 60px 80px 100px 80px; /* 60 is the vertical padding, 80 is horizontal */
+    max-width: 520px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Used 0.4 opacity for better visibility */
+    color: white; 
+    text-align: center;
+}
+
+/* Text Styling */
+h1 {
+    font-size: 3.5em;
+    letter-spacing: 2px;
+    margin-bottom: 0.3em; 
+    font-family: 'Cinzel', serif;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.tagline {
+    font-size: 0.9em;
+    opacity: 0.8; 
+    margin-top: 5px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 2em;
+}
+
+/* The Gold Button (CTA) */
+.cta-button {
+    text-decoration: none; 
+    background-color: #FFC72C;
+    color: #1a1a1a; 
+    font-size: 1.2em;
+    font-weight: 700;
+    padding: 18px 35px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 0 0 20px rgba(255, 199, 44, 0.7);
+    transition: all 0.3s ease; /* Changed to 'all' for smoother transition */
+}
+.cta-button:hover {
+    background-color: #D0A200; 
+    box-shadow: 0 4 10px rgba(255, 199, 44, 1);  
+}
+
+/* Logo Styling - The successful fix combination */
+.logo {
+    height: 100px; /* Fixed height for small size */
+    width: 100px; /* Fixed width for small size */
+    margin-bottom: 9px; 
+    /* Removed redundant border/padding/flex rules from here */
+    max-width: 100%; 
+    object-fit: contain;
+}
+
+/* Optional logo wrapper styling */
+.logo-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; 
+    transition: all 0.3s ease;
+}
+.logo-link:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 0 10px rgba(207, 163, 72, 0.8);
+}
+
+/* Corrected Contact Info Styling */
+.contact-info {
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.75);
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+}
+.contact-info a { /* Correct syntax for targeting links within the class */
+    color: inherit; 
+    text-decoration: none;
+}
+
+p{ 
+    margin-top: -0.5em;
+    margin-bottom: 1.5em;
+    font-size: 1.1em;
+}
+
+@media (max-width: 600px) {
+    .elegant-container {
+        /* Reduce the side padding drastically for mobile screens */
+        padding: 40px 30px 40px 30px; 
+
+        /* Ensure it takes up most of the screen width */
+        max-width: 90%;
+        width: 90%;
+    }
+
+    h1 {
+        /* Shrink the main title font size so it doesn't wrap awkwardly */
+        font-size: 2.5em;
+    }
+    .logo{
+        /* Shrink the logo sixe slightly for mobile */
+        height: 80px;
+        width: 80px;
+    }
+}
